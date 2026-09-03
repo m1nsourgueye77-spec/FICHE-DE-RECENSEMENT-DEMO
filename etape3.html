@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Étape 3 - Informations complémentaires</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Informations complémentaires</h1>
+
+
+    <form id="form3">
+
+
+        <div class="form-group">
+
+    <label for="photo">
+        Photo du membre
+    </label>
+
+    <input
+        type="file"
+        id="photo"
+        name="photo"
+        accept="image/*"
+    >
+
+</div>
+
+
+        <label>
+            Collecteur
+        </label>
+
+        <input
+            type="text"
+            name="nomcollecteur"
+        >
+
+
+        <label>
+            Contact du collecteur
+        </label>
+
+        <input
+            type="tel"
+            name="contactcollecteur"
+        >
+
+
+        <label>
+            Signature électronique
+            <span>(facultative)</span>
+        </label>
+
+
+        <div class="signature-box">
+
+            <canvas id="signature"></canvas>
+
+        </div>
+
+
+        <input
+            type="hidden"
+            name="signature"
+            id="signatureData"
+        >
+
+
+        <button
+            type="button"
+            class="clear-btn"
+            onclick="effacerSignature()"
+        >
+            Effacer la signature
+        </button>
+
+
+        <div class="actions">
+
+            <button
+                type="button"
+                onclick="precedent()"
+            >
+                ← Précédent
+            </button>
+
+
+            <button type="submit">
+                Suivant →
+            </button>
+
+        </div>
+
+
+    </form>
+
+</div>
+
+
+<script src="js/script.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/signature.js"></script>
+
+
+<script>
+
+const form = document.getElementById("form3");
+
+
+remplirFormulaire();
+
+
+form.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+
+    if (!verifier(form)) {
+        return;
+    }
+
+
+    // ==========================================
+    // SIGNATURE
+    // ==========================================
+
+    const canvas =
+        document.getElementById("signature");
+
+    const signatureData =
+        document.getElementById("signatureData");
+
+
+    if (
+        canvas &&
+        signatureData &&
+        canvas.width > 0
+    ) {
+
+        try {
+
+            signatureData.value =
+                canvas.toDataURL("image/png");
+
+        } catch(error) {
+
+            console.error(
+                "Erreur signature :",
+                error
+            );
+
+        }
+
+    }
+
+
+    // ==========================================
+    // SAUVEGARDE DES CHAMPS
+    // ==========================================
+
+    sauvegarderFormulaire(form);
+
+
+    // ==========================================
+    // PHOTO
+    // ==========================================
+
+    const photoInput =
+        document.getElementById("photo");
+
+
+    if (
+        photoInput &&
+        photoInput.files &&
+        photoInput.files.length > 0
+    ) {
+
+        const fichier =
+            photoInput.files[0];
+
+
+        const reader =
+            new FileReader();
+
+
+        reader.onload = function(event) {
+
+            const data =
+                chargerDonnees();
+
+
+            data.photo =
+                event.target.result;
+
+
+            localStorage.setItem(
+                "adhesionPDP",
+                JSON.stringify(data)
+            );
+
+
+            suivant("etape4.html");
+
+        };
+
+
+        reader.readAsDataURL(fichier);
+
+
+    } else {
+
+        // Pas de photo
+
+        suivant("recapitulatif.html");
+
+    }
+
+});
+
+</script>
+
+<script>
+
+const photoInput = document.getElementById("photo");
+
+if (photoInput) {
+
+    photoInput.addEventListener("change", function () {
+
+        const fichier = this.files[0];
+
+        if (!fichier) return;
+
+        const lecteur = new FileReader();
+
+        lecteur.onload = function (e) {
+
+            const data = chargerDonnees();
+
+            data.photo = e.target.result;
+
+            localStorage.setItem(
+                STORAGE_KEY,
+                JSON.stringify(data)
+            );
+
+        };
+
+        lecteur.readAsDataURL(fichier);
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>

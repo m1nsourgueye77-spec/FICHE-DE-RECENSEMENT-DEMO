@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Étape 2 - Informations politiques</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Informations politiques</h2>
+
+
+    <form id="form2">
+
+        <label>Région</label>
+
+        <input
+            type="text"
+            name="region"
+            required
+        >
+
+
+        <label>Département</label>
+
+        <select
+            name="departement"
+            required
+        >
+
+            <option value="">
+                Choisir
+            </option>
+
+            <option value="Dakar">
+                Dakar
+            </option>
+
+            <option value="Pikine">
+                Pikine
+            </option>
+
+            <option value="Guédiawaye">
+                Guédiawaye
+            </option>
+
+        </select>
+
+
+        <label>Commune</label>
+
+        <input
+            type="text"
+            name="commune"
+            required
+        >
+
+
+        <label>Centre de vote</label>
+
+        <input
+            type="text"
+            name="centre"
+            required
+        >
+
+
+        <label>Bureau de vote N°</label>
+
+        <input
+            type="text"
+            name="bureau"
+            required
+        >
+
+
+        <label>Cellule</label>
+
+        <input
+            type="text"
+            name="cellule"
+            required
+        >
+
+
+<label>Fonction dans le parti</label>
+
+<select
+    name="fonction"
+    id="fonction"
+    required
+    onchange="afficherPoste()">
+
+    <option value="">
+        -- Sélectionner --
+    </option>
+
+    <option value="Membre simple">
+        Membre simple
+    </option>
+
+    <option value="Sympathisant">
+        Sympathisant
+    </option>
+
+    <option value="Poste de responsabilité">
+        Poste de responsabilité
+    </option>
+
+</select>
+
+
+<div
+    id="posteResponsabilite"
+    style="display:none;">
+
+    <label>
+        Préciser le poste de responsabilité
+    </label>
+
+    <input
+        type="text"
+        name="poste_responsabilite"
+        id="poste_responsabilite"
+        placeholder="Ex. Coordinateur, Secrétaire, Trésorier..."
+    >
+
+</div>
+
+
+
+<script>
+function afficherPoste() {
+    const fonction = document.getElementById("fonction").value;
+    const bloc = document.getElementById("posteResponsabilite");
+    const poste = document.getElementById("poste_responsabilite");
+
+    if (fonction === "Poste de responsabilité") {
+        bloc.style.display = "block";
+        poste.required = true;
+    } else {
+        bloc.style.display = "none";
+        poste.required = false;
+        poste.value = "";
+    }
+}
+</script>
+
+
+        <label>Date d'adhésion</label>
+
+        <input
+            type="date"
+            name="adhesion"
+            required
+        >
+
+
+        <div class="actions">
+
+            <button
+                type="button"
+                onclick="precedent()"
+            >
+                ← Précédent
+            </button>
+
+
+            <button type="submit">
+                Suivant →
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+
+<script src="js/script.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/validation.js"></script>
+
+
+<script>
+
+const form = document.getElementById("form2");
+
+
+remplirFormulaire();
+
+
+form.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+
+    if (!verifier(form)) {
+        return;
+    }
+
+
+    sauvegarderFormulaire(form);
+
+
+    console.log(
+        "Étape 2 enregistrée :",
+        chargerDonnees()
+    );
+
+
+    suivant("etape3.html");
+
+});
+
+</script>
+
+</body>
+
+</html>
