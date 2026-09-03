@@ -194,7 +194,7 @@ function exporterPDF() {
     // ==============================
 
     const numero =
-        data.numeroAdherent || "PDP";
+        data.numeroAdherent || "";
 
     doc.save(
         `Adhesion_${numero}.pdf`

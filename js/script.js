@@ -1,4 +1,4 @@
-const STORAGE_KEY = "adhesionPDP";
+const STORAGE_KEY = "adhesion";
 
 
 function chargerDonnees() {

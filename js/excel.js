@@ -115,7 +115,7 @@ function exporterExcel() {
 
     lien.download =
         "Adhesion_" +
-        (data.numeroAdherent || "PDP") +
+        (data.numeroAdherent || "") +
         ".csv";
 
 
