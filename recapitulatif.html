@@ -8,7 +8,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Récapitulatif - PARTI/ASSOCIATION/MOUVEMENT</title>
+    <title>Récapitulatif - Adhésion Parti- Mouvement - Association</title>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -19,13 +19,13 @@
 <div class="container">
 
     <div class="pdf-header">
-    <img src="images/logo.jpg"
+    <img src="images/logo-.jpg"
          class="pdf-logo"
-         alt="Logo Mon PARTI/ASSOCIATION/MOUVEMENT">
+         alt="Logo Parti- Mouvement - Association">
 
     <div class="pdf-title">
-        <h1>PARTI/ASSOCIATION/MOUVEMENT</h1>
-        <p>PARTI/ASSOCIATION/MOUVEMENT pour ............</p>
+        <h1>Parti- Mouvement - Association</h1>
+        <p>Parti- Mouvement - Association</p>
     </div>
 </div>
 
@@ -427,7 +427,7 @@ function validerAdhesion() {
         const dernierNumero =
             parseInt(
                 localStorage.getItem(
-                    "dernierNumero"
+                    "dernierNumeroPMA"
                 ) || "0"
             );
 
@@ -436,13 +436,13 @@ function validerAdhesion() {
 
 
         data.numeroAdherent =
-            "2026" +
+            "PMA-2026-" +
             String(nouveauNumero)
                 .padStart(6, "0");
 
 
         localStorage.setItem(
-            "dernierNumero",
+            "dernierNumeroPMA",
             nouveauNumero
         );
     }
@@ -453,7 +453,7 @@ function validerAdhesion() {
     // ==========================================
 
     localStorage.setItem(
-        "adhesion",
+        "adhesionPMA",
         JSON.stringify(data)
     );
 
