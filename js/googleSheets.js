@@ -1,5 +1,5 @@
 const GOOGLE_SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbw_gPUcSOTv1FoxfBHLvxAg9LkCHQwvjDYnbxcMCO9HBIWufv8xCWF0RIYEJkv8Yx_CrQ/exec";
+    "https://script.google.com/macros/s/AKfycbxqSYN-594YDbgtnAtOspxPWvmE3fIPbe7ExteW6WUjMx8Zxg36piC1R0U2nk3Ts_IMJQ/exec";
 
 
 function envoyerVersGoogleSheets(data) {
@@ -107,7 +107,7 @@ function envoyerVersGoogleSheets(data) {
 
 
         localStorage.setItem(
-            "adhesion",
+            "adhesionPDP",
             JSON.stringify(data)
         );
 
