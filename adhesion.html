@@ -10,7 +10,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Adhésion en ligne - Mon PARTI/ASSOCIATION/MOUVEMENT</title>
+    <title>Adhésion en ligne - Parti- Mouvement - Association</title>
 
     <link
         rel="stylesheet"
@@ -24,9 +24,9 @@
 <div class="container">
 
     <img
-        src="images/logo.jpg"
+        src="images/logo-.jpg"
         class="logo"
-        alt="Logo Mon PARTI/ASSOCIATION/MOUVEMENT"
+        alt="Logo PDP Wérum Réw"
     >
 
 
@@ -36,7 +36,7 @@
 
 
     <p class="slogan">
-        Mon PARTI/ASSOCIATION/MOUVEMENT – Coordination de ...........
+        Parti- Mouvement - Association – Coordination de ...
     </p>
 
 
@@ -44,7 +44,7 @@
 
         <p>
             Bienvenue sur la plateforme officielle
-            d'adhésion numérique de mon Mon PARTI/ASSOCIATION/MOUVEMENT.
+            d'adhésion numérique du PDP Wérum Réw.
         </p>
 
         <p>
@@ -90,29 +90,33 @@
     </div>
 
 
-    <button
-        type="button"
-        class="btn"
-        onclick="nouvelleAdhesion()"
-    >
+    <div>
+
+    <button class="btn" onclick="nouvelleAdhesion()">
         🟢 Commencer une nouvelle adhésion
     </button>
 
-
     <button
         type="button"
-        class="btn-effacer"
-        onclick="viderDonnees()"
+        class="btn secondaire"
+        onclick="ouvrirScanner()"
     >
-        🗑️ Effacer les anciennes données
+        📷 Scanner une carte
     </button>
 
-
-    <div
-        id="message"
-        class="message"
+    <button
+        onclick="viderDonnees()"
+        class="btn-effacer"
     >
-    </div>
+        Effacer les anciennes données
+    </button>
+
+</div>
+
+<p id="messageScanner"></p>
+
+
+   
 
 
     <div class="confidentialite">
@@ -120,7 +124,7 @@
         <p>
             🔒 Vos informations sont utilisées
             uniquement dans le cadre de l'adhésion
-            au Mon PARTI/ASSOCIATION/MOUVEMENT.
+            au PDP Wérum Réw.
         </p>
 
     </div>
@@ -135,8 +139,12 @@
 
 </div>
 
-
+<script src="js/config.js"></script>
 <script src="js/script.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/signature.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/pdf.js"></script>
 
 <script>
 
