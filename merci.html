@@ -136,7 +136,7 @@ document.addEventListener(
                 "Numéro introuvable";
 
             console.error(
-                "Aucune donnée adhesionPDP trouvée."
+                "Aucune donnée adhesionPMA trouvée."
             );
 
             return;
@@ -223,7 +223,7 @@ function telechargerPDF() {
 
     const adhesion =
         localStorage.getItem(
-            "adhesionPDP"
+            "adhesionPMA"
         );
 
 
@@ -289,7 +289,7 @@ function telechargerPDF() {
 
 
     doc.text(
-        "PDP WÉRUM RÉW",
+        "Parti- Mouvement - Association",
         105,
         y,
         {
@@ -507,7 +507,7 @@ function telechargerPDF() {
 
     const numero =
         data.numeroAdherent ||
-        "PDP";
+        "PMA";
 
 
     doc.save(
