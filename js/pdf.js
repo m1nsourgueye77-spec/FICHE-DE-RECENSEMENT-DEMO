@@ -26,7 +26,7 @@ function exporterPDF() {
     try {
 
         doc.addImage(
-            "logo-.jpg",
+            "images/logo-.jpg",
             "JPEG",
             85,
             8,
@@ -55,7 +55,7 @@ function exporterPDF() {
     doc.setFont("helvetica", "bold");
 
     doc.text(
-        "ADHÉSION Parti- Mouvement - Association",
+        "ADHÉSION GI- Recensement",
         105,
         y,
         { align: "center" }
@@ -409,7 +409,7 @@ function exporterPDF() {
         );
 
         doc.text(
-            "Parti- Mouvement - Association – Document officiel d'adhésion",
+            "GI- Recensement – Document officiel d'adhésion",
             105,
             290,
             { align: "center" }
