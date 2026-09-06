@@ -107,7 +107,7 @@ function envoyerVersGoogleSheets(data) {
 
 
         localStorage.setItem(
-            "adhesionPDP",
+            "adhesionPMA",
             JSON.stringify(data)
         );
 
