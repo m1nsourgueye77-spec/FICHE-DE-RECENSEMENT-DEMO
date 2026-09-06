@@ -26,7 +26,7 @@ function exporterPDF() {
     try {
 
         doc.addImage(
-            "images/logo-.jpg",
+            "logo-.jpg",
             "JPEG",
             85,
             8,
