@@ -26,7 +26,7 @@ function exporterPDF() {
     try {
 
         doc.addImage(
-            "images/logo-pma.jpg",
+            "logo-pma.jpg",
             "JPEG",
             85,
             8,
