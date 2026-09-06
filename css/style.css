@@ -291,3 +291,270 @@ td:first-child{
         display: flex !important;
     }
 }
+
+
+
+
+
+
+
+/* =====================================================
+   GI.CODE / GI- Recensement
+   DESIGN PROFESSIONNEL DES BOUTONS
+===================================================== */
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+/* =====================================================
+   CONTENEUR DES BOUTONS
+===================================================== */
+
+.form-buttons,
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+/* =====================================================
+   STYLE COMMUN
+===================================================== */
+
+.form-buttons button,
+.actions button,
+.actions-carte button,
+.clear-btn,
+.btn,
+.valider {
+    border: none;
+    border-radius: 8px;
+    padding: 13px 22px;
+    min-height: 46px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.10);
+}
+
+/* Effet général */
+
+.form-buttons button:hover,
+.actions button:hover,
+.actions-carte button:hover,
+.clear-btn:hover,
+.btn:hover,
+.valider:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+/* =====================================================
+   BOUTON PRINCIPAL
+===================================================== */
+
+.btn-primary,
+.next,
+.valider {
+    background: #087f3b;
+    color: white;
+}
+
+.btn-primary:hover,
+.next:hover,
+.valider:hover {
+    background: #05652f;
+}
+
+/* =====================================================
+   BOUTON SUIVANT
+===================================================== */
+
+.actions button[type="submit"] {
+    background: #087f3b;
+    color: white;
+}
+
+.actions button[type="submit"]:hover {
+    background: #05652f;
+}
+
+/* =====================================================
+   BOUTON PRÉCÉDENT
+===================================================== */
+
+.actions button[onclick="precedent()"] {
+    background: #6c757d;
+    color: white;
+}
+
+.actions button[onclick="precedent()"]:hover {
+    background: #565e64;
+}
+
+/* =====================================================
+   BOUTON RÉINITIALISER
+===================================================== */
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #565e64;
+}
+
+/* =====================================================
+   BOUTON PDF
+===================================================== */
+
+.btn-pdf {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-pdf:hover {
+    background: #b02a37;
+}
+
+/* =====================================================
+   BOUTON EXCEL
+===================================================== */
+
+.btn-excel {
+    background: #198754;
+    color: white;
+}
+
+.btn-excel:hover {
+    background: #146c43;
+}
+
+/* =====================================================
+   BOUTON QR / SCANNER
+===================================================== */
+
+.btn-qr,
+.btn-scanner {
+    background: #0d6efd;
+    color: white;
+}
+
+.btn-qr:hover,
+.btn-scanner:hover {
+    background: #0a58ca;
+}
+
+/* =====================================================
+   BOUTON CARTE MEMBRE
+===================================================== */
+
+.btn-card {
+    background: #6f42c1;
+    color: white;
+}
+
+.btn-card:hover {
+    background: #59359a;
+}
+
+/* =====================================================
+   BOUTON EFFACER
+===================================================== */
+
+.btn-effacer,
+.clear-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-effacer:hover,
+.clear-btn:hover {
+    background: #b02a37;
+}
+
+/* =====================================================
+   BOUTON ACCUEIL
+===================================================== */
+
+.btn-home {
+    background: #343a40;
+    color: white;
+}
+
+.btn-home:hover {
+    background: #212529;
+}
+
+/* =====================================================
+   BOUTON SCANNER DEPUIS L'ACCUEIL
+===================================================== */
+
+.btn-secondaire,
+.btn-scanner {
+    background: #0d6efd;
+    color: white;
+}
+
+/* =====================================================
+   BOUTON DÉSACTIVÉ
+===================================================== */
+
+button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* =====================================================
+   BOUTONS DE LA PAGE CARTE
+===================================================== */
+
+.actions-carte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.actions-carte button:first-child {
+    background: #087f3b;
+}
+
+.actions-carte button:last-child {
+    background: #343a40;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .form-buttons,
+    .actions,
+    .actions-carte {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .form-buttons button,
+    .actions button,
+    .actions-carte button,
+    .clear-btn,
+    .btn,
+    .valider {
+        width: 100%;
+        max-width: 360px;
+    }
+
+}
