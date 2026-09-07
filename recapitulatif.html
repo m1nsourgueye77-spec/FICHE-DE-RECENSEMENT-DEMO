@@ -8,7 +8,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Récapitulatif - Adhésion GI- Recensement</title>
+    <title>Vérification et validation - GI-Recensement</title>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -16,250 +16,590 @@
 
 <body>
 
-<div class="container">
+<div class="form-page">
 
-    <div class="pdf-header">
-    <img src="logo-.jpg"
-         class="pdf-logo"
-         alt="Logo GI- Recensement">
+    <!-- =========================================
+         EN-TÊTE
+    ========================================== -->
 
-    <div class="pdf-title">
-        <h1>GI- Recensement</h1>
-        <p>GI- Recensement</p>
-    </div>
-</div>
+    <header class="form-header">
 
-    <h1>Vérification des informations</h1>
+        <div class="form-logo-wrapper">
 
-    <p>
-        Merci de vérifier attentivement les informations ci-dessous
-        avant de valider votre adhésion.
-    </p>
-
-
-    <!-- ============================== -->
-    <!-- INFORMATIONS PERSONNELLES -->
-    <!-- ============================== -->
-
-    <h2>Informations personnelles</h2>
-
-    <table>
-
-        <tr>
-            <td>Prénom et Nom</td>
-            <td id="nom">Non renseigné</td>
-        </tr>
-
-        <tr>
-            <td>Date de naissance</td>
-            <td id="naissance">Non renseigné</td>
-        </tr>
-
-        <tr>
-            <td>Sexe</td>
-            <td id="sexe">Non renseigné</td>
-        </tr>
-
-        <tr>
-            <td>Téléphone</td>
-            <td id="telephone">Non renseigné</td>
-        </tr>
-
-        <tr>
-            <td>Adresse / Quartier</td>
-            <td id="adresse">Non renseigné</td>
-        </tr>
-
-        <tr>
-            <td>Profession</td>
-            <td id="profession">Non renseigné</td>
-        </tr>
-
-        <tr>
-            <td>Numéro de CNI Votant</td>
-            <td id="cni">Non renseigné</td>
-        </tr>
-
-        <tr>
-            <td>Numéro de CNI Non Votant</td>
-            <td id="nonvotant">Non renseigné</td>
-        </tr>
-
-        <tr>
-            <td>Numéro Carte Électeur</td>
-            <td id="electeur">Non renseigné</td>
-        </tr>
-
-    
-
-    </table>
-
-
-    <!-- ============================== -->
-    <!-- LOCALISATION POLITIQUE -->
-    <!-- ============================== -->
-
-    <h2>Localisation électorale</h2>
-
-    <table>
-
-        <tr>
-            <td>Région</td>
-            <td id="region">Non renseigné</td>
-        </tr>
-
-        <tr>
-            <td>Département</td>
-            <td id="departement">Non renseigné</td>
-        </tr>
-
-        <tr>
-            <td>Commune</td>
-            <td id="commune">Non renseigné</td>
-        </tr>
-
-        <tr>
-            <td>Centre de vote</td>
-            <td id="centre">Non renseigné</td>
-        </tr>
-
-        <tr>
-            <td>Bureau de vote N°</td>
-            <td id="bureau">Non renseigné</td>
-        </tr>
-
-        <tr>
-            <td>Cellule</td>
-            <td id="cellule">Non renseigné</td>
-        </tr>
-
-        <tr>
-            <td>Fonction dans le parti</td>
-            <td id="fonction">Non renseigné</td>
-        </tr>
-
-        <tr>
-    <td>Poste de responsabilité</td>
-    <td id="poste_responsabilite">
-        Non renseigné
-    </td>
-        </tr>
-
-        <tr>
-    <td>Numéro adhérent</td>
-    <td id="numeroAdherent">Non attribué</td>
-       </tr>
-
-       <tr>
-    <td>Date de validation</td>
-    <td id="dateValidation">Non renseignée</td>
-      </tr>
-
-        <tr>
-            <td>Date d'adhésion</td>
-            <td id="adhesion">Non renseigné</td>
-        </tr>
-
-    </table>
-
-
-    <!-- ============================== -->
-    <!-- CONTACT D'URGENCE -->
-    <!-- ============================== -->
-
-    <h2>Collecteur</h2>
-
-    <table>
-
-        <tr>
-            <td>Nom</td>
-            <td id="nomcollecteur">Non renseigné</td>
-        </tr>
-
-        <tr>
-            <td>Contact</td>
-            <td id="contactcollecteur">Non renseigné</td>
-        </tr>
-
-    </table>
-
-
-    <!-- ============================== -->
-    <!-- CERTIFICATION -->
-    <!-- ============================== -->
-
-    <div class="certification">
-
-        <label>
-
-            <input
-                type="checkbox"
-                id="certification"
+            <img
+                src="logo-.jpg"
+                alt="Logo GI-Recensement"
+                class="form-logo"
             >
 
-            Je certifie que toutes les informations fournies
-            sont exactes et j'accepte les conditions d'adhésion.
-
-        </label>
-
-    </div>
+        </div>
 
 
-    <!-- ============================== -->
-    <!-- ACTIONS -->
-    <!-- ============================== -->
+        <div class="form-header-text">
 
-    <div class="actions">
+            <span class="form-badge">
+                ADHÉSION EN LIGNE
+            </span>
 
-        <button
-            type="button"
-            onclick="precedent()"
+            <h1>
+                Vérification et validation
+            </h1>
+
+            <p>
+                GI-Recensement – Dernière étape de votre adhésion
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         PROGRESSION
+    ========================================== -->
+
+    <section class="progress-card">
+
+        <div class="progress-top">
+
+            <div>
+
+                <strong>
+                    Votre adhésion
+                </strong>
+
+                <span>
+                    Étape 4 sur 4
+                </span>
+
+            </div>
+
+            <strong>
+                100%
+            </strong>
+
+        </div>
+
+
+        <div class="progress-bar">
+
+            <div
+                class="progress-fill"
+                style="width: 100%;">
+            </div>
+
+        </div>
+
+
+        <div class="progress-labels">
+
+            <span class="completed">
+                1. Informations personnelles
+            </span>
+
+            <span class="completed">
+                2. Informations politiques
+            </span>
+
+            <span class="completed">
+                3. Informations complémentaires
+            </span>
+
+            <span class="active">
+                4. Validation
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CONTENU
+    ========================================== -->
+
+    <main class="form-container">
+
+
+        <!-- =====================================
+             INTRODUCTION
+        ====================================== -->
+
+        <section class="review-intro">
+
+            <div class="review-intro-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <h2>
+                    Vérification des informations
+                </h2>
+
+                <p>
+                    Merci de vérifier attentivement les informations
+                    ci-dessous avant de valider définitivement
+                    votre adhésion.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             INFORMATIONS PERSONNELLES
+        ====================================== -->
+
+        <section class="form-section">
+
+            <div class="form-section-title">
+
+                <span class="form-section-icon">
+                    👤
+                </span>
+
+                <div>
+
+                    <h2>
+                        Informations personnelles
+                    </h2>
+
+                    <p>
+                        Informations d'identification du membre.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="review-grid">
+
+                <div class="review-item">
+                    <span>Prénom et Nom</span>
+                    <strong id="nom">Non renseigné</strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Date de naissance</span>
+                    <strong id="naissance">Non renseigné</strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Sexe</span>
+                    <strong id="sexe">Non renseigné</strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Téléphone</span>
+                    <strong id="telephone">Non renseigné</strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Adresse / Quartier</span>
+                    <strong id="adresse">Non renseigné</strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Profession</span>
+                    <strong id="profession">Non renseigné</strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Numéro de CNI Votant</span>
+                    <strong id="cni">Non renseigné</strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Numéro de CNI Non Votant</span>
+                    <strong id="nonvotant">Non renseigné</strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Numéro Carte Électeur</span>
+                    <strong id="electeur">Non renseigné</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             LOCALISATION ÉLECTORALE
+        ====================================== -->
+
+        <section class="form-section">
+
+            <div class="form-section-title">
+
+                <span class="form-section-icon">
+                    📍
+                </span>
+
+                <div>
+
+                    <h2>
+                        Localisation électorale
+                    </h2>
+
+                    <p>
+                        Informations relatives au rattachement
+                        électoral et organisationnel.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="review-grid">
+
+                <div class="review-item">
+                    <span>Région</span>
+                    <strong id="region">Non renseigné</strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Département</span>
+                    <strong id="departement">Non renseigné</strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Commune</span>
+                    <strong id="commune">Non renseigné</strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Centre de vote</span>
+                    <strong id="centre">Non renseigné</strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Bureau de vote N°</span>
+                    <strong id="bureau">Non renseigné</strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Cellule</span>
+                    <strong id="cellule">Non renseigné</strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Fonction</span>
+                    <strong id="fonction">Non renseigné</strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Poste de responsabilité</span>
+                    <strong id="poste_responsabilite">
+                        Non renseigné
+                    </strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Numéro adhérent</span>
+                    <strong
+                        id="numeroAdherent"
+                        class="review-number">
+                        Non attribué
+                    </strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Date de validation</span>
+                    <strong id="dateValidation">
+                        Non renseignée
+                    </strong>
+                </div>
+
+
+                <div class="review-item">
+                    <span>Date d'adhésion</span>
+                    <strong id="adhesion">
+                        Non renseigné
+                    </strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             COLLECTEUR
+        ====================================== -->
+
+        <section class="form-section">
+
+            <div class="form-section-title">
+
+                <span class="form-section-icon">
+                    🧑‍💼
+                </span>
+
+                <div>
+
+                    <h2>
+                        Collecteur
+                    </h2>
+
+                    <p>
+                        Informations relatives à la collecte
+                        des données.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="review-grid">
+
+                <div class="review-item">
+
+                    <span>
+                        Nom du collecteur
+                    </span>
+
+                    <strong id="nomcollecteur">
+                        Non renseigné
+                    </strong>
+
+                </div>
+
+
+                <div class="review-item">
+
+                    <span>
+                        Contact du collecteur
+                    </span>
+
+                    <strong id="contactcollecteur">
+                        Non renseigné
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CERTIFICATION
+        ====================================== -->
+
+        <section class="certification-box">
+
+            <div class="certification-icon">
+                ✓
+            </div>
+
+
+            <div class="certification-content">
+
+                <h3>
+                    Certification des informations
+                </h3>
+
+
+                <label class="certification-label">
+
+                    <input
+                        type="checkbox"
+                        id="certification"
+                    >
+
+                    <span>
+                        Je certifie que toutes les informations
+                        fournies sont exactes et j'accepte les
+                        conditions d'adhésion.
+                    </span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             AVERTISSEMENT
+        ====================================== -->
+
+        <div class="electoral-notice">
+
+            <span>
+                🔒
+            </span>
+
+            <div>
+
+                <strong>
+                    Dernière vérification
+                </strong>
+
+                <p>
+                    Après validation, votre adhésion sera enregistrée
+                    et un numéro d'adhérent pourra vous être attribué.
+                    Vérifiez donc attentivement vos informations.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             ACTIONS PRINCIPALES
+        ====================================== -->
+
+        <div class="form-actions">
+
+            <button
+                type="button"
+                class="form-btn back"
+                onclick="precedent()"
+            >
+                ← Modifier
+            </button>
+
+
+            <button
+                type="button"
+                class="form-btn next"
+                id="btnValider"
+                onclick="validerAdhesion()"
+            >
+                ✓ Valider mon adhésion
+            </button>
+
+        </div>
+
+
+        <!-- =====================================
+             EXPORT
+        ====================================== -->
+
+        <section
+            id="exports"
+            class="export-section"
         >
-            ← Précédent
-        </button>
+
+            <div class="export-title">
+
+                <span>
+                    📥
+                </span>
+
+                <div>
+
+                    <h3>
+                        Exporter les informations
+                    </h3>
+
+                    <p>
+                        Téléchargez les données enregistrées
+                        dans le format souhaité.
+                    </p>
+
+                </div>
+
+            </div>
 
 
-        <button
-            type="button"
-            class="valider"
-            id="btnValider"
-            onclick="validerAdhesion()"
+            <button
+                type="button"
+                class="export-btn"
+                onclick="exporterExcel()"
+            >
+                📊 Télécharger Excel
+            </button>
+
+        </section>
+
+
+        <!-- =====================================
+             MESSAGE
+        ====================================== -->
+
+        <p
+            id="message"
+            class="form-message"
+            aria-live="polite"
         >
-            ✓ Valider mon adhésion
-        </button>
-
-    </div>
+        </p>
 
 
-<div id="exports" class="form-buttons">
+        <!-- =====================================
+             CONFIDENTIALITÉ
+        ====================================== -->
 
-    <button
-        type="button"
-        class="btn-pdf"
-        onclick="exporterPDF()">
-        📄 Télécharger PDF
-    </button>
+        <div class="form-confidentiality">
 
-    <button
-        type="button"
-        class="btn-excel"
-        onclick="exporterExcel()">
-        📊 Télécharger Excel
-    </button>
+            🔒
+
+            <div>
+
+                <strong>
+                    Vos informations sont confidentielles
+                </strong>
+
+                <p>
+                    Les données renseignées sont traitées dans
+                    le cadre du processus de recensement et
+                    d'adhésion.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================
+         PIED DE PAGE
+    ========================================== -->
+
+    <footer class="form-footer">
+
+        <p>
+            © 2026 GI-Recensement
+        </p>
+
+        <p>
+            Plateforme numérique de gestion des adhésions
+        </p>
+
+    </footer>
 
 </div>
 
 
-    <p id="message"
-       style="margin-top:20px;">
-    </p>
-
-</div>
-
-
-<!-- ============================== -->
-<!-- JAVASCRIPT -->
-<!-- ============================== -->
+<!-- =========================================
+     JAVASCRIPT
+========================================== -->
 
 <script src="js/script.js"></script>
 
@@ -268,18 +608,25 @@
 <script src="js/googleSheets.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
-
 <script src="js/pdf.js"></script>
+
 <script src="js/excel.js"></script>
 
 
 <script>
 
+/* ============================================
+   CHARGEMENT DES DONNÉES
+============================================ */
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    const data = chargerDonnees();
+    const data =
+        chargerDonnees();
+
 
     console.log(
         "Données récupérées depuis localStorage :",
@@ -287,103 +634,151 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
-    // ==============================
-    // AFFICHAGE
-    // ==============================
+    /* ========================================
+       INFORMATIONS PERSONNELLES
+    ======================================== */
 
     document.getElementById("nom").textContent =
         data.nom || "Non renseigné";
 
+
     document.getElementById("naissance").textContent =
         data.naissance || "Non renseigné";
+
 
     document.getElementById("sexe").textContent =
         data.sexe || "Non renseigné";
 
+
     document.getElementById("telephone").textContent =
         data.telephone || "Non renseigné";
 
+
     document.getElementById("adresse").textContent =
-        data.quartier || data.adresse || "Non renseigné";
+        data.quartier ||
+        data.adresse ||
+        "Non renseigné";
+
 
     document.getElementById("profession").textContent =
-        data.profession || "Non renseigné";
+        data.profession ||
+        "Non renseigné";
+
 
     document.getElementById("cni").textContent =
-        data.cni || "Non renseigné";
+        data.cni ||
+        "Non renseigné";
+
 
     document.getElementById("nonvotant").textContent =
-        data.nonvotant || "Non renseigné";
+        data.nonvotant ||
+        "Non renseigné";
+
 
     document.getElementById("electeur").textContent =
-        data.electeur || "Non renseigné";
+        data.electeur ||
+        "Non renseigné";
+
+
+    /* ========================================
+       LOCALISATION
+    ======================================== */
 
     document.getElementById("region").textContent =
-        data.region || "Non renseigné";
+        data.region ||
+        "Non renseigné";
+
 
     document.getElementById("departement").textContent =
-        data.departement || "Non renseigné";
+        data.departement ||
+        "Non renseigné";
+
 
     document.getElementById("commune").textContent =
-        data.commune || "Non renseigné";
+        data.commune ||
+        "Non renseigné";
+
 
     document.getElementById("centre").textContent =
-        data.centre || "Non renseigné";
+        data.centre ||
+        "Non renseigné";
+
 
     document.getElementById("bureau").textContent =
-        data.bureau || "Non renseigné";
+        data.bureau ||
+        "Non renseigné";
+
 
     document.getElementById("cellule").textContent =
-        data.cellule || "Non renseigné";
+        data.cellule ||
+        "Non renseigné";
+
 
     document.getElementById("fonction").textContent =
-        data.fonction || "Non renseigné";
+        data.fonction ||
+        "Non renseigné";
 
-        document.getElementById(
-    "poste_responsabilite"
-).textContent =
-    data.poste_responsabilite ||
-    "Non renseigné";
+
+    document.getElementById("poste_responsabilite").textContent =
+        data.poste_responsabilite ||
+        "Non renseigné";
+
 
     document.getElementById("numeroAdherent").textContent =
-    data.numeroAdherent || "Non attribué";
+        data.numeroAdherent ||
+        "Non attribué";
+
 
     document.getElementById("dateValidation").textContent =
-    data.dateValidation
-        ? new Date(data.dateValidation).toLocaleString("fr-FR")
-        : "Non renseignée";
+        data.dateValidation
+            ? new Date(
+                data.dateValidation
+              ).toLocaleString("fr-FR")
+            : "Non renseignée";
+
 
     document.getElementById("adhesion").textContent =
-        data.adhesion || "Non renseigné";
+        data.adhesion ||
+        "Non renseigné";
+
+
+    /* ========================================
+       COLLECTEUR
+    ======================================== */
 
     document.getElementById("nomcollecteur").textContent =
-        data.nomcollecteur || "Non renseigné";
+        data.nomcollecteur ||
+        "Non renseigné";
+
 
     document.getElementById("contactcollecteur").textContent =
-        data.contactcollecteur || "Non renseigné";
+        data.contactcollecteur ||
+        "Non renseigné";
 
 });
 
 
-// ============================================
-// VALIDATION DE L'ADHÉSION
-// ============================================
+/* ============================================
+   VALIDATION DE L'ADHÉSION
+============================================ */
 
 function validerAdhesion() {
 
     const certification =
         document.getElementById("certification");
 
+
     const bouton =
         document.getElementById("btnValider");
+
 
     const message =
         document.getElementById("message");
 
 
-    // ==========================================
-    // CERTIFICATION
-    // ==========================================
+    /* ========================================
+       CERTIFICATION
+    ======================================== */
 
     if (!certification.checked) {
 
@@ -392,35 +787,36 @@ function validerAdhesion() {
         );
 
         return;
+
     }
 
 
-    // ==========================================
-    // RÉCUPÉRATION DES DONNÉES
-    // ==========================================
+    /* ========================================
+       RÉCUPÉRATION
+    ======================================== */
 
     const data =
         chargerDonnees();
 
 
-    // ==========================================
-    // CERTIFICATION
-    // ==========================================
+    /* ========================================
+       CERTIFICATION
+    ======================================== */
 
     data.certification = true;
 
 
-    // ==========================================
-    // DATE DE VALIDATION
-    // ==========================================
+    /* ========================================
+       DATE DE VALIDATION
+    ======================================== */
 
     data.dateValidation =
         new Date().toISOString();
 
 
-    // ==========================================
-    // NUMÉRO ADHÉRENT TEMPORAIRE
-    // ==========================================
+    /* ========================================
+       NUMÉRO ADHÉRENT
+    ======================================== */
 
     if (!data.numeroAdherent) {
 
@@ -430,6 +826,7 @@ function validerAdhesion() {
                     "dernierNumeroPMA"
                 ) || "0"
             );
+
 
         const nouveauNumero =
             dernierNumero + 1;
@@ -445,12 +842,13 @@ function validerAdhesion() {
             "dernierNumeroPMA",
             nouveauNumero
         );
+
     }
 
 
-    // ==========================================
-    // SAUVEGARDE IMMÉDIATE
-    // ==========================================
+    /* ========================================
+       SAUVEGARDE
+    ======================================== */
 
     localStorage.setItem(
         "adhesionPMA",
@@ -458,21 +856,18 @@ function validerAdhesion() {
     );
 
 
-    // ==========================================
-    // CONTRÔLE
-    // ==========================================
-
     console.log(
         "DONNÉES FINALES :",
         data
     );
 
 
-    // ==========================================
-    // INTERFACE
-    // ==========================================
+    /* ========================================
+       INTERFACE
+    ======================================== */
 
     bouton.disabled = true;
+
 
     bouton.textContent =
         "⏳ Enregistrement...";
@@ -482,16 +877,16 @@ function validerAdhesion() {
         "Enregistrement de votre adhésion...";
 
 
-    // ==========================================
-    // GOOGLE SHEETS
-    // ==========================================
+    /* ========================================
+       GOOGLE SHEETS
+    ======================================== */
 
     envoyerVersGoogleSheets(data);
+
 }
 
 </script>
 
-
-
 </body>
+
 </html>
