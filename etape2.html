@@ -2,7 +2,6 @@
 <html lang="fr">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="viewport"
@@ -11,195 +10,554 @@
     <title>Étape 2 - Informations politiques</title>
 
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
 
-<div class="container">
+<div class="form-page">
 
-    <h2>Informations politiques</h2>
+    <!-- =========================
+         EN-TÊTE
+    ========================== -->
+    <header class="form-header">
 
-
-    <form id="form2">
-
-        <label>Région</label>
-
-        <input
-            type="text"
-            name="region"
-            required
-        >
-
-
-        <label>Département</label>
-
-        <select
-            name="departement"
-            required
-        >
-
-            <option value="">
-                Choisir
-            </option>
-
-            <option value="Dakar">
-                Dakar
-            </option>
-
-            <option value="Pikine">
-                Pikine
-            </option>
-
-            <option value="Guédiawaye">
-                Guédiawaye
-            </option>
-
-        </select>
-
-
-        <label>Commune</label>
-
-        <input
-            type="text"
-            name="commune"
-            required
-        >
-
-
-        <label>Centre de vote</label>
-
-        <input
-            type="text"
-            name="centre"
-            required
-        >
-
-
-        <label>Bureau de vote N°</label>
-
-        <input
-            type="text"
-            name="bureau"
-            required
-        >
-
-
-        <label>Cellule</label>
-
-        <input
-            type="text"
-            name="cellule"
-            required
-        >
-
-
-<label>Fonction dans le GI- Recensement</label>
-
-<select
-    name="fonction"
-    id="fonction"
-    required
-    onchange="afficherPoste()">
-
-    <option value="">
-        -- Sélectionner --
-    </option>
-
-    <option value="Membre simple">
-        Membre simple
-    </option>
-
-    <option value="Sympathisant">
-        Sympathisant
-    </option>
-
-    <option value="Poste de responsabilité">
-        Poste de responsabilité
-    </option>
-
-</select>
-
-
-<div
-    id="posteResponsabilite"
-    style="display:none;">
-
-    <label>
-        Préciser le poste de responsabilité
-    </label>
-
-    <input
-        type="text"
-        name="poste_responsabilite"
-        id="poste_responsabilite"
-        placeholder="Ex. Coordinateur, Secrétaire, Trésorier..."
-    >
-
-</div>
-
-
-
-<script>
-function afficherPoste() {
-    const fonction = document.getElementById("fonction").value;
-    const bloc = document.getElementById("posteResponsabilite");
-    const poste = document.getElementById("poste_responsabilite");
-
-    if (fonction === "Poste de responsabilité") {
-        bloc.style.display = "block";
-        poste.required = true;
-    } else {
-        bloc.style.display = "none";
-        poste.required = false;
-        poste.value = "";
-    }
-}
-</script>
-
-
-        <label>Date d'adhésion</label>
-
-        <input
-            type="date"
-            name="adhesion"
-            required
-        >
-
-
-        <div class="actions">
-
-            <button
-                type="button"
-                onclick="precedent()"
+        <div class="form-logo-wrapper">
+            <img
+                src="logo-pma.jpg"
+                alt="Logo GI-Recensement"
+                class="form-logo"
             >
-                ← Précédent
-            </button>
+        </div>
 
+        <div class="form-header-text">
 
-            <button type="submit">
-                Suivant →
-            </button>
+            <span class="form-badge">
+                ADHÉSION EN LIGNE
+            </span>
+
+            <h1>
+                Informations politiques
+            </h1>
+
+            <p>
+                GI-Recensement – Étape 2 de votre adhésion
+            </p>
 
         </div>
 
-    </form>
+    </header>
+
+
+    <!-- =========================
+         PROGRESSION
+    ========================== -->
+    <section class="progress-card">
+
+        <div class="progress-top">
+
+            <div>
+                <strong>Votre adhésion</strong>
+                <span>Étape 2 sur 4</span>
+            </div>
+
+            <strong>50%</strong>
+
+        </div>
+
+
+        <div class="progress-bar">
+
+            <div
+                class="progress-fill"
+                style="width: 50%;">
+            </div>
+
+        </div>
+
+
+        <div class="progress-labels">
+
+            <span class="completed">
+                1. Informations personnelles
+            </span>
+
+            <span class="active">
+                2. Informations politiques
+            </span>
+
+            <span>
+                3. Informations complémentaires
+            </span>
+
+            <span>
+                4. Validation
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FORMULAIRE
+    ========================== -->
+    <main class="form-container">
+
+        <form id="form2">
+
+
+            <!-- =========================
+                 SECTION LOCALISATION
+            ========================== -->
+            <section class="form-section">
+
+                <div class="form-section-title">
+
+                    <span class="form-section-icon">
+                        📍
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Localisation politique
+                        </h2>
+
+                        <p>
+                            Indiquez votre zone de rattachement
+                            et vos informations électorales.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <!-- Région -->
+                    <div class="form-group">
+
+                        <label for="region">
+                            Région
+                            <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="region"
+                            id="region"
+                            placeholder="Ex. Dakar"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Département -->
+                    <div class="form-group">
+
+                        <label for="departement">
+                            Département
+                            <span class="required">*</span>
+                        </label>
+
+                        <select
+                            name="departement"
+                            id="departement"
+                            required
+                        >
+
+                            <option value="">
+                                Choisir
+                            </option>
+
+                            <option value="Dakar">
+                                Dakar
+                            </option>
+
+                            <option value="Pikine">
+                                Pikine
+                            </option>
+
+                            <option value="Guédiawaye">
+                                Guédiawaye
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Commune -->
+                    <div class="form-group">
+
+                        <label for="commune">
+                            Commune
+                            <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="commune"
+                            id="commune"
+                            placeholder="Ex. Thiaroye-sur-Mer"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Centre -->
+                    <div class="form-group">
+
+                        <label for="centre">
+                            Centre de vote
+                            <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="centre"
+                            id="centre"
+                            placeholder="Nom du centre de vote"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Bureau -->
+                    <div class="form-group">
+
+                        <label for="bureau">
+                            Bureau de vote N°
+                            <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="bureau"
+                            id="bureau"
+                            placeholder="Ex. Bureau 12"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Cellule -->
+                    <div class="form-group">
+
+                        <label for="cellule">
+                            Cellule
+                            <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="cellule"
+                            id="cellule"
+                            placeholder="Votre cellule"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 SECTION FONCTION
+            ========================== -->
+            <section class="form-section">
+
+                <div class="form-section-title">
+
+                    <span class="form-section-icon">
+                        👥
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Fonction dans le GI-Recensement
+                        </h2>
+
+                        <p>
+                            Précisez votre statut ou votre niveau
+                            de responsabilité.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="fonction">
+                        Fonction
+                        <span class="required">*</span>
+                    </label>
+
+                    <select
+                        name="fonction"
+                        id="fonction"
+                        required
+                        onchange="afficherPoste()"
+                    >
+
+                        <option value="">
+                            -- Sélectionner --
+                        </option>
+
+                        <option value="Membre simple">
+                            Membre simple
+                        </option>
+
+                        <option value="Sympathisant">
+                            Sympathisant
+                        </option>
+
+                        <option value="Poste de responsabilité">
+                            Poste de responsabilité
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Poste de responsabilité -->
+                <div
+                    id="posteResponsabilite"
+                    class="responsibility-box"
+                    style="display:none;"
+                >
+
+                    <div class="form-group">
+
+                        <label for="poste_responsabilite">
+                            Préciser le poste de responsabilité
+                        </label>
+
+                        <input
+                            type="text"
+                            name="poste_responsabilite"
+                            id="poste_responsabilite"
+                            placeholder="Ex. Coordinateur, Secrétaire, Trésorier..."
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 SECTION ADHÉSION
+            ========================== -->
+            <section class="form-section">
+
+                <div class="form-section-title">
+
+                    <span class="form-section-icon">
+                        📅
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Date d'adhésion
+                        </h2>
+
+                        <p>
+                            Indiquez la date officielle de votre adhésion.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="adhesion">
+                        Date d'adhésion
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="date"
+                        name="adhesion"
+                        id="adhesion"
+                        required
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 INFORMATION
+            ========================== -->
+            <div class="electoral-notice">
+
+                <span>ℹ️</span>
+
+                <div>
+
+                    <strong>
+                        Vérifiez vos informations
+                    </strong>
+
+                    <p>
+                        Les informations renseignées permettent
+                        d'assurer une identification correcte du membre
+                        et son rattachement à sa zone.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 BOUTONS
+            ========================== -->
+            <div class="form-actions">
+
+                <button
+                    type="button"
+                    class="form-btn back"
+                    onclick="precedent()"
+                >
+                    ← Précédent
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="form-btn next"
+                >
+                    Suivant →
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 CONFIDENTIALITÉ
+            ========================== -->
+            <div class="form-confidentiality">
+
+                🔒
+
+                <div>
+
+                    <strong>
+                        Vos informations sont confidentielles
+                    </strong>
+
+                    <p>
+                        Les données saisies sont utilisées uniquement
+                        dans le cadre du processus d'adhésion.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <!-- =========================
+         PIED DE PAGE
+    ========================== -->
+    <footer class="form-footer">
+
+        <p>
+            © 2026 GI-Recensement
+        </p>
+
+        <p>
+            Plateforme numérique de gestion des adhésions
+        </p>
+
+    </footer>
 
 </div>
 
 
+<!-- =========================
+     SCRIPTS EXISTANTS
+========================== -->
+
 <script src="js/script.js"></script>
+
 <script src="js/navigation.js"></script>
+
 <script src="js/validation.js"></script>
 
 
 <script>
 
-const form = document.getElementById("form2");
+/* =====================================================
+   AFFICHER / MASQUER LE POSTE DE RESPONSABILITÉ
+===================================================== */
+
+function afficherPoste() {
+
+    const fonction =
+        document.getElementById("fonction").value;
+
+    const bloc =
+        document.getElementById("posteResponsabilite");
+
+    const poste =
+        document.getElementById("poste_responsabilite");
+
+
+    if (fonction === "Poste de responsabilité") {
+
+        bloc.style.display = "block";
+
+        poste.required = true;
+
+    } else {
+
+        bloc.style.display = "none";
+
+        poste.required = false;
+
+        poste.value = "";
+
+    }
+
+}
+
+
+/* =====================================================
+   INITIALISATION DU FORMULAIRE
+===================================================== */
+
+const form =
+    document.getElementById("form2");
 
 
 remplirFormulaire();
 
+
+/* =====================================================
+   ENREGISTREMENT ÉTAPE 2
+===================================================== */
 
 form.addEventListener("submit", function(e) {
 
@@ -207,7 +565,9 @@ form.addEventListener("submit", function(e) {
 
 
     if (!verifier(form)) {
+
         return;
+
     }
 
 
