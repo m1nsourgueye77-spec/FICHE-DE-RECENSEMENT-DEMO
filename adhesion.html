@@ -1,152 +1,411 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-    <title>Adhésion en ligne - GI- Recensement</title>
+<title>Adhésion en ligne - GI-Recensement</title>
 
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
+<link
+    rel="stylesheet"
+    href="css/style.css"
+>
 
 </head>
 
 <body>
 
-<div class="container">
+<div class="page">
 
-    <img
-        src="logo-pma.jpg"
-        class="logo"
-        alt="Logo PMA"
-    >
+<!-- =====================================================
+     EN-TÊTE
+====================================================== -->
+
+<header class="header">
+
+    <div class="logo-wrapper">
+
+        <img
+            src="logo-pma.jpg"
+            class="logo"
+            alt="Logo de l'organisation"
+        >
+
+    </div>
+
+    <div class="header-text">
+
+        <span class="badge">
+            PLATEFORME NUMÉRIQUE
+        </span>
+
+        <h1>
+            Adhésion en ligne
+        </h1>
+
+        <p>
+            GI-Recensement – Coordination de ...
+        </p>
+
+    </div>
+
+</header>
 
 
-    <h1>
-        Adhésion en ligne
-    </h1>
+<!-- =====================================================
+     PRÉSENTATION
+====================================================== -->
+
+<main>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="welcome">
+                BIENVENUE
+            </span>
+
+            <h2>
+                Simplifiez votre adhésion
+            </h2>
+
+            <p>
+                Bienvenue sur la plateforme numérique
+                de recensement et d'adhésion de
+                <strong>GI-Recensement</strong>.
+            </p>
+
+            <p>
+                Remplissez votre fiche en quelques minutes
+                depuis votre téléphone ou votre ordinateur.
+                Après validation, un numéro d'adhérent est
+                généré automatiquement.
+            </p>
+
+        </div>
+
+        <div class="hero-icon">
+            🪪
+        </div>
+
+    </section>
 
 
-    <p class="slogan">
-        GI- Recensement – Coordination de ...
+    <!-- =================================================
+         DÉROULEMENT
+    ================================================== -->
+
+    <section class="steps-section">
+
+        <div class="section-heading">
+
+            <span class="section-number">
+                01
+            </span>
+
+            <div>
+
+                <h2>
+                    Déroulement de l'adhésion
+                </h2>
+
+                <p>
+                    Un parcours simple en quatre étapes
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="steps">
+
+
+            <div class="step-card">
+
+                <div class="step-icon">
+                    👤
+                </div>
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>
+                    Informations personnelles
+                </h3>
+
+                <p>
+                    Nom, prénom, date de naissance,
+                    téléphone, adresse et autres
+                    informations personnelles.
+                </p>
+
+            </div>
+
+
+            <div class="step-card">
+
+                <div class="step-icon">
+                    🏛️
+                </div>
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>
+                    Informations politiques
+                </h3>
+
+                <p>
+                    Renseignements concernant votre
+                    adhésion, votre structure, votre
+                    fonction et votre cellule.
+                </p>
+
+            </div>
+
+
+            <div class="step-card">
+
+                <div class="step-icon">
+                    📋
+                </div>
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>
+                    Informations complémentaires
+                </h3>
+
+                <p>
+                    Ajoutez les informations nécessaires
+                    à la constitution complète de votre
+                    dossier.
+                </p>
+
+            </div>
+
+
+            <div class="step-card">
+
+                <div class="step-icon">
+                    ✓
+                </div>
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <h3>
+                    Vérification et validation
+                </h3>
+
+                <p>
+                    Vérifiez vos informations puis
+                    validez votre adhésion avant
+                    la génération de votre carte.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         ACTIONS
+    ================================================== -->
+
+    <section class="actions-section">
+
+        <div class="action-intro">
+
+            <h2>
+                Commencer votre démarche
+            </h2>
+
+            <p>
+                Choisissez une des options ci-dessous
+                pour poursuivre.
+            </p>
+
+        </div>
+
+
+        <div class="actions">
+
+
+            <button
+                type="button"
+                class="action-card primary"
+                onclick="nouvelleAdhesion()"
+            >
+
+                <span class="action-icon">
+                    🟢
+                </span>
+
+                <span class="action-content">
+
+                    <strong>
+                        Commencer une nouvelle adhésion
+                    </strong>
+
+                    <small>
+                        Remplir une nouvelle fiche d'adhésion
+                    </small>
+
+                </span>
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="action-card secondary"
+                onclick="ouvrirScanner()"
+            >
+
+                <span class="action-icon">
+                    📷
+                </span>
+
+                <span class="action-content">
+
+                    <strong>
+                        Scanner une carte membre
+                    </strong>
+
+                    <small>
+                        Rechercher un membre à partir de sa carte
+                    </small>
+
+                </span>
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <!-- Message du scanner -->
+
+        <p
+            id="messageScanner"
+            class="message"
+            aria-live="polite"
+        ></p>
+
+
+        <!-- =================================================
+             CONFIDENTIALITÉ
+        ================================================== -->
+
+        <div class="confidentialite">
+
+            <div class="lock">
+                🔒
+            </div>
+
+            <div>
+
+                <strong>
+                    Vos informations sont confidentielles
+                </strong>
+
+                <p>
+                    Les informations fournies sont utilisées
+                    uniquement dans le cadre de l'adhésion
+                    à GI-Recensement.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SUPPRESSION DES DONNÉES
+        ================================================== -->
+
+        <div class="data-management">
+
+            <button
+                type="button"
+                onclick="viderDonnees()"
+                class="btn-effacer"
+            >
+                🗑️ Effacer les anciennes données
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     PIED DE PAGE
+====================================================== -->
+
+<footer class="footer">
+
+    <p>
+        © 2026 <strong>Gi.Code</strong> —
+        Plateforme numérique d'adhésion
     </p>
 
+    <span>
+        Version DEMO
+    </span>
 
-    <div class="presentation">
-
-        <p>
-            Bienvenue sur la plateforme officielle
-            d'adhésion numérique de GI- Recensement.
-        </p>
-
-        <p>
-            Ce formulaire vous permettra de devenir
-            membre en quelques minutes depuis votre
-            téléphone ou votre ordinateur.
-        </p>
-
-        <p>
-            Après validation de votre dossier, un
-            numéro d'adhérent sera généré automatiquement.
-        </p>
-
-    </div>
-
-
-    <div class="etapes">
-
-        <h2>
-            Déroulement de l'adhésion
-        </h2>
-
-        <ol>
-
-            <li>
-                Informations personnelles
-            </li>
-
-            <li>
-                Informations politiques
-            </li>
-
-            <li>
-                Informations complémentaires
-            </li>
-
-            <li>
-                Vérification et validation
-            </li>
-
-        </ol>
-
-    </div>
-
-
-    <div>
-
-    <button class="btn" onclick="nouvelleAdhesion()">
-        🟢 Commencer une nouvelle adhésion
-    </button>
-
-    <button
-        type="button"
-        class="btn secondaire"
-        onclick="ouvrirScanner()"
-    >
-        📷 Scanner une carte
-    </button>
-
-    <button
-        onclick="viderDonnees()"
-        class="btn-effacer"
-    >
-        Effacer les anciennes données
-    </button>
+</footer>
+```
 
 </div>
 
-<p id="messageScanner"></p>
-
-
-   
-
-
-    <div class="confidentialite">
-
-        <p>
-            🔒 Vos informations sont utilisées
-            uniquement dans le cadre de l'adhésion
-            a GI- Recensement.
-        </p>
-
-    </div>
-
-
-    <div class="footer">
-
-        © 2026 Gi.Code -
-        Plateforme numérique d'adhésion
-
-    </div>
-
-</div>
+<!-- =========================================================
+     SCRIPTS EXISTANTS — CONSERVÉS
+========================================================= -->
 
 <script src="js/config.js"></script>
+
 <script src="js/script.js"></script>
+
 <script src="js/validation.js"></script>
+
 <script src="js/signature.js"></script>
+
 <script src="js/navigation.js"></script>
+
 <script src="js/pdf.js"></script>
 
 <script>
+
+/* =========================================================
+   NOUVELLE ADHÉSION
+========================================================= */
 
 function nouvelleAdhesion() {
 
@@ -174,6 +433,10 @@ function nouvelleAdhesion() {
 }
 
 
+/* =========================================================
+   EFFACER LES ANCIENNES DONNÉES
+========================================================= */
+
 function viderDonnees() {
 
     const confirmation =
@@ -200,16 +463,31 @@ function viderDonnees() {
     );
 
 
+    /*
+     * CORRECTION :
+     * L'ancien code cherchait #message alors que
+     * le paragraphe utilisé est #messageScanner.
+     */
+
     const message =
-        document.getElementById("message");
+        document.getElementById(
+            "messageScanner"
+        );
 
 
-    message.textContent =
-        "✓ Les anciennes données ont été effacées.";
+    if (message) {
 
+        message.textContent =
+            "✓ Les anciennes données ont été effacées.";
 
-    message.style.display =
-        "block";
+        message.classList.add(
+            "success-message"
+        );
+
+        message.style.display =
+            "block";
+
+    }
 
 }
 
