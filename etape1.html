@@ -1,103 +1,507 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adhésion - GI- Recensement</title>
-<link rel="stylesheet" href="css/style.css">
 
+<html lang="fr">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Adhésion - GI-Recensement</title>
+
+<link
+    rel="stylesheet"
+    href="css/style.css"
+>
+```
 
 </head>
 
 <body>
 
-<div class="container">
+<div class="form-page">
 
-<h2>Formulaire d'adhésion</h2>
+```
+<!-- =====================================================
+     EN-TÊTE
+====================================================== -->
 
-<form id="form1">
+<header class="form-header">
 
-<label>Prénom et Nom</label>
-<input type="text" name="nom" required>
+    <div class="form-logo-wrapper">
 
+        <img
+            src="logo-pma.jpg"
+            class="form-logo"
+            alt="Logo de l'organisation"
+        >
 
-
-<label>Date de naissance</label>
-<input 
-    type="text" 
-    name="naissance" 
-    placeholder="Ex. 10 Octobre 1980" 
-    required
->
-
-
-
-<label>Sexe</label>
-<select name="sexe" required>
-<option value="">Choisir</option>
-<option>Homme</option>
-<option>Femme</option>
-</select>
-
-<label>Téléphone</label>
-<input type="tel" name="telephone" required>
-
-<label>Quartier</label>
-<input type="text" name="quartier" required>
-
-<label>Profession</label>
-<input type="text" name="profession">
+    </div>
 
 
-<label> Numéro de CNI Votant</label>
-<input type="text" name="cni" placeholder="Votant">
+    <div class="form-header-text">
 
-<label> Numéro de CNI Non Votant</label>
-<input type="text" name="nonvotant" placeholder="nonvotant">
+        <span class="form-badge">
+            ADHÉSION EN LIGNE
+        </span>
+
+        <h1>
+            Formulaire d'adhésion
+        </h1>
+
+        <p>
+            GI-Recensement – Coordination de ...
+        </p>
+
+    </div>
+
+</header>
 
 
-<label>Numéro Carte Electeur</label>
-<input type="text" name="electeur">
+<!-- =====================================================
+     PROGRESSION
+====================================================== -->
+
+<section class="progress-card">
+
+    <div class="progress-top">
+
+        <div>
+
+            <strong>
+                Votre adhésion
+            </strong>
+
+            <span>
+                Étape 1 sur 4
+            </span>
+
+        </div>
+
+        <strong class="progress-percent">
+            25%
+        </strong>
+
+    </div>
 
 
+    <div class="progress-bar">
+
+        <div class="progress-fill"></div>
+
+    </div>
 
 
-<button type="submit" class="btn-primary">
-    Suivant →
-</button>
-    
-</form>
+    <div class="progress-labels">
+
+        <span class="active">
+            Informations personnelles
+        </span>
+
+        <span>
+            Informations politiques
+        </span>
+
+        <span>
+            Compléments
+        </span>
+
+        <span>
+            Validation
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FORMULAIRE
+====================================================== -->
+
+<main>
+
+    <form id="form1">
+
+
+        <!-- =================================================
+             INFORMATIONS PERSONNELLES
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="form-section-title">
+
+                <div class="form-section-icon">
+                    👤
+                </div>
+
+                <div>
+
+                    <h2>
+                        Informations personnelles
+                    </h2>
+
+                    <p>
+                        Renseignez vos informations d'identification.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group full">
+
+                    <label for="nom">
+                        Prénom et Nom
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nom"
+                        name="nom"
+                        placeholder="Ex. Mansour Gueye"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="naissance">
+                        Date de naissance
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="naissance"
+                        name="naissance"
+                        placeholder="Ex. 10 Octobre 1980"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="sexe">
+                        Sexe
+                        <span>*</span>
+                    </label>
+
+                    <select
+                        id="sexe"
+                        name="sexe"
+                        required
+                    >
+
+                        <option value="">
+                            Choisir
+                        </option>
+
+                        <option>
+                            Homme
+                        </option>
+
+                        <option>
+                            Femme
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="telephone">
+                        Téléphone
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telephone"
+                        name="telephone"
+                        placeholder="Ex. 77 000 00 00"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="quartier">
+                        Quartier
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="quartier"
+                        name="quartier"
+                        placeholder="Votre quartier"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label for="profession">
+                        Profession
+                    </label>
+
+                    <input
+                        type="text"
+                        id="profession"
+                        name="profession"
+                        placeholder="Votre profession"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INFORMATIONS ÉLECTORALES
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="form-section-title">
+
+                <div class="form-section-icon">
+                    🗳️
+                </div>
+
+                <div>
+
+                    <h2>
+                        Informations électorales
+                    </h2>
+
+                    <p>
+                        Ces informations permettent de compléter votre dossier.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="electoral-notice">
+
+                <strong>
+                    ℹ️ Informations facultatives
+                </strong>
+
+                <p>
+                    Renseignez les informations correspondant
+                    à votre situation électorale.
+                </p>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="cni">
+                        Numéro de CNI Votant
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cni"
+                        name="cni"
+                        placeholder="Numéro de CNI"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="nonvotant">
+                        Numéro de CNI Non Votant
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nonvotant"
+                        name="nonvotant"
+                        placeholder="Numéro de CNI"
+                    >
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label for="electeur">
+                        Numéro Carte Électeur
+                    </label>
+
+                    <input
+                        type="text"
+                        id="electeur"
+                        name="electeur"
+                        placeholder="Numéro de votre carte d'électeur"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BOUTONS
+        ================================================== -->
+
+        <section class="form-actions">
+
+            <button
+                type="button"
+                class="form-btn back"
+                onclick="window.location.href='adhesion.html'"
+            >
+
+                ←
+                <span>
+                    Retour
+                </span>
+
+            </button>
+
+
+            <button
+                type="submit"
+                class="form-btn next"
+            >
+
+                <span>
+                    Suivant
+                </span>
+
+                →
+
+            </button>
+
+        </section>
+
+
+    </form>
+
+
+    <!-- =================================================
+         CONFIDENTIALITÉ
+    ================================================== -->
+
+    <div class="form-confidentiality">
+
+        <span>
+            🔒
+        </span>
+
+        <div>
+
+            <strong>
+                Vos informations sont confidentielles
+            </strong>
+
+            <p>
+                Les informations saisies sont utilisées
+                uniquement dans le cadre de votre adhésion.
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="form-footer">
+
+    © 2026 <strong>Gi.Code</strong> —
+    Plateforme numérique d'adhésion
+
+</footer>
+```
 
 </div>
 
-
+<!-- =========================================================
+     SCRIPTS EXISTANTS — NE PAS MODIFIER
+========================================================= -->
 
 <script src="js/script.js"></script>
+
 <script src="js/navigation.js"></script>
+
 <script src="js/validation.js"></script>
 
 <script>
+
 const form = document.getElementById("form1");
 
 // Remplit les champs si des données existent déjà
 remplirFormulaire();
 
-form.addEventListener("submit", function(e){
+
+form.addEventListener("submit", function(e) {
 
     e.preventDefault();
 
-    if(!verifier(form)){
+
+    if (!verifier(form)) {
         return;
     }
 
 
     sauvegarderFormulaire(form);
 
-    console.log(chargerDonnees());
 
-    suivant("etape2.html");
+    console.log(
+        chargerDonnees()
+    );
+
+
+    suivant(
+        "etape2.html"
+    );
 
 });
+
 </script>
+
 </body>
+
 </html>
