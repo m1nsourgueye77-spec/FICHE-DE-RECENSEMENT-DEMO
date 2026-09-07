@@ -16,128 +16,542 @@
 
 <body>
 
-<div class="container">
+<div class="form-page">
 
-    <h1>Informations complémentaires</h1>
+    <!-- =========================================
+         EN-TÊTE
+    ========================================== -->
 
+    <header class="form-header">
 
-    <form id="form3">
+        <div class="form-logo-wrapper">
 
-
-        <div class="form-group">
-
-    <label for="photo">
-        Photo du membre
-    </label>
-
-    <input
-        type="file"
-        id="photo"
-        name="photo"
-        accept="image/*"
-    >
-
-</div>
-
-
-        <label>
-            Collecteur
-        </label>
-
-        <input
-            type="text"
-            name="nomcollecteur"
-        >
-
-
-        <label>
-            Contact du collecteur
-        </label>
-
-        <input
-            type="tel"
-            name="contactcollecteur"
-        >
-
-
-        <label>
-            Signature électronique
-            <span>(facultative)</span>
-        </label>
-
-
-        <div class="signature-box">
-
-            <canvas id="signature"></canvas>
-
-        </div>
-
-
-        <input
-            type="hidden"
-            name="signature"
-            id="signatureData"
-        >
-
-
-<button 
-    type="button" 
-    class="clear-btn" 
-    onclick="effacerSignature()" 
->
-    ✕ Effacer la signature
-</button>
-
-
-        <div class="actions">
-
-            <button
-                type="button"
-                onclick="precedent()"
+            <img
+                src="logo-pma.jpg"
+                alt="Logo GI-Recensement"
+                class="form-logo"
             >
-                ← Précédent
-            </button>
-
-
-            <button type="submit">
-                Suivant →
-            </button>
 
         </div>
 
 
-    </form>
+        <div class="form-header-text">
+
+            <span class="form-badge">
+                ADHÉSION EN LIGNE
+            </span>
+
+            <h1>
+                Informations complémentaires
+            </h1>
+
+            <p>
+                GI-Recensement – Étape 3 de votre adhésion
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         PROGRESSION
+    ========================================== -->
+
+    <section class="progress-card">
+
+        <div class="progress-top">
+
+            <div>
+
+                <strong>
+                    Votre adhésion
+                </strong>
+
+                <span>
+                    Étape 3 sur 4
+                </span>
+
+            </div>
+
+            <strong>
+                75%
+            </strong>
+
+        </div>
+
+
+        <div class="progress-bar">
+
+            <div
+                class="progress-fill"
+                style="width: 75%;">
+            </div>
+
+        </div>
+
+
+        <div class="progress-labels">
+
+            <span class="completed">
+                1. Informations personnelles
+            </span>
+
+            <span class="completed">
+                2. Informations politiques
+            </span>
+
+            <span class="active">
+                3. Informations complémentaires
+            </span>
+
+            <span>
+                4. Validation
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FORMULAIRE
+    ========================================== -->
+
+    <main class="form-container">
+
+        <form id="form3">
+
+
+            <!-- =================================
+                 PHOTO
+            ================================== -->
+
+            <section class="form-section">
+
+                <div class="form-section-title">
+
+                    <span class="form-section-icon">
+                        📷
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Photo du membre
+                        </h2>
+
+                        <p>
+                            Ajoutez une photo permettant
+                            d'identifier le membre.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="photo">
+                        Photo du membre
+                    </label>
+
+                    <input
+                        type="file"
+                        id="photo"
+                        name="photo"
+                        accept="image/*"
+                    >
+
+                    <small class="field-help">
+                        Formats image acceptés : JPG, JPEG, PNG.
+                    </small>
+
+                </div>
+
+
+                <div
+                    id="photoPreview"
+                    class="photo-preview"
+                    style="display:none;"
+                >
+
+                    <p>
+                        Aperçu de la photo
+                    </p>
+
+                    <img
+                        id="photoPreviewImage"
+                        src=""
+                        alt="Aperçu de la photo"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 COLLECTEUR
+            ================================== -->
+
+            <section class="form-section">
+
+                <div class="form-section-title">
+
+                    <span class="form-section-icon">
+                        👤
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Informations du collecteur
+                        </h2>
+
+                        <p>
+                            Indiquez la personne ayant effectué
+                            ou accompagné le recensement.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="nomcollecteur">
+                            Nom du collecteur
+                        </label>
+
+                        <input
+                            type="text"
+                            name="nomcollecteur"
+                            id="nomcollecteur"
+                            placeholder="Prénom et nom du collecteur"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="contactcollecteur">
+                            Contact du collecteur
+                        </label>
+
+                        <input
+                            type="tel"
+                            name="contactcollecteur"
+                            id="contactcollecteur"
+                            placeholder="Ex. 77 000 00 00"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="electoral-notice">
+
+                    <span>
+                        ℹ️
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            À quoi sert le collecteur ?
+                        </strong>
+
+                        <p>
+                            Le collecteur est la personne qui
+                            accompagne l'enregistrement des
+                            informations du membre sur la plateforme.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 SIGNATURE
+            ================================== -->
+
+            <section class="form-section">
+
+                <div class="form-section-title">
+
+                    <span class="form-section-icon">
+                        ✍️
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Signature électronique
+                        </h2>
+
+                        <p>
+                            Vous pouvez ajouter une signature
+                            électronique. Cette étape est facultative.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="signature">
+                        Signature électronique
+                        <span class="optional">
+                            (facultative)
+                        </span>
+                    </label>
+
+
+                    <div class="signature-box">
+
+                        <canvas id="signature"></canvas>
+
+                    </div>
+
+
+                    <input
+                        type="hidden"
+                        name="signature"
+                        id="signatureData"
+                    >
+
+
+                    <button
+                        type="button"
+                        class="clear-btn"
+                        onclick="effacerSignature()"
+                    >
+                        Effacer la signature
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 INFORMATION
+            ================================== -->
+
+            <div class="electoral-notice">
+
+                <span>
+                    🔒
+                </span>
+
+                <div>
+
+                    <strong>
+                        Dernière étape avant la validation
+                    </strong>
+
+                    <p>
+                        Vérifiez les informations saisies avant
+                        de poursuivre. Vous pourrez ensuite consulter
+                        le récapitulatif de votre adhésion.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 BOUTONS
+            ================================== -->
+
+            <div class="form-actions">
+
+                <button
+                    type="button"
+                    class="form-btn back"
+                    onclick="precedent()"
+                >
+                    ← Précédent
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="form-btn next"
+                >
+                    Suivant →
+                </button>
+
+            </div>
+
+
+            <!-- =================================
+                 CONFIDENTIALITÉ
+            ================================== -->
+
+            <div class="form-confidentiality">
+
+                🔒
+
+                <div>
+
+                    <strong>
+                        Vos informations sont confidentielles
+                    </strong>
+
+                    <p>
+                        Les données saisies sont utilisées
+                        uniquement dans le cadre du processus
+                        de recensement et d'adhésion.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <!-- =========================================
+         PIED DE PAGE
+    ========================================== -->
+
+    <footer class="form-footer">
+
+        <p>
+            © 2026 GI-Recensement
+        </p>
+
+        <p>
+            Plateforme numérique de gestion des adhésions
+        </p>
+
+    </footer>
 
 </div>
 
+
+<!-- =========================================
+     SCRIPTS EXISTANTS
+========================================== -->
 
 <script src="js/script.js"></script>
+
 <script src="js/navigation.js"></script>
+
 <script src="js/validation.js"></script>
+
 <script src="js/signature.js"></script>
 
 
 <script>
 
-const form = document.getElementById("form3");
+/* ============================================
+   FORMULAIRE
+============================================ */
 
+const form =
+    document.getElementById("form3");
+
+
+/* ============================================
+   CHARGEMENT DES DONNÉES EXISTANTES
+============================================ */
 
 remplirFormulaire();
 
+
+/* ============================================
+   APERÇU DE LA PHOTO
+============================================ */
+
+const photoInput =
+    document.getElementById("photo");
+
+const photoPreview =
+    document.getElementById("photoPreview");
+
+const photoPreviewImage =
+    document.getElementById("photoPreviewImage");
+
+
+if (photoInput) {
+
+    photoInput.addEventListener("change", function () {
+
+        const fichier =
+            this.files[0];
+
+
+        if (!fichier) {
+
+            photoPreview.style.display = "none";
+
+            return;
+
+        }
+
+
+        const lecteur =
+            new FileReader();
+
+
+        lecteur.onload = function (e) {
+
+            photoPreviewImage.src =
+                e.target.result;
+
+            photoPreview.style.display =
+                "block";
+
+        };
+
+
+        lecteur.readAsDataURL(fichier);
+
+    });
+
+}
+
+
+/* ============================================
+   ENREGISTREMENT ÉTAPE 3
+============================================ */
 
 form.addEventListener("submit", function(e) {
 
     e.preventDefault();
 
 
+    /* ----------------------------------------
+       VALIDATION
+    ---------------------------------------- */
+
     if (!verifier(form)) {
+
         return;
+
     }
 
 
-    // ==========================================
-    // SIGNATURE
-    // ==========================================
+    /* ----------------------------------------
+       SIGNATURE
+    ---------------------------------------- */
 
     const canvas =
         document.getElementById("signature");
@@ -157,7 +571,7 @@ form.addEventListener("submit", function(e) {
             signatureData.value =
                 canvas.toDataURL("image/png");
 
-        } catch(error) {
+        } catch (error) {
 
             console.error(
                 "Erreur signature :",
@@ -169,36 +583,32 @@ form.addEventListener("submit", function(e) {
     }
 
 
-    // ==========================================
-    // SAUVEGARDE DES CHAMPS
-    // ==========================================
+    /* ----------------------------------------
+       SAUVEGARDE DES CHAMPS
+    ---------------------------------------- */
 
     sauvegarderFormulaire(form);
 
 
-    // ==========================================
-    // PHOTO
-    // ==========================================
+    /* ----------------------------------------
+       PHOTO
+    ---------------------------------------- */
 
-    const photoInput =
-        document.getElementById("photo");
-
-
-    if (
+    const fichier =
         photoInput &&
         photoInput.files &&
         photoInput.files.length > 0
-    ) {
-
-        const fichier =
-            photoInput.files[0];
+            ? photoInput.files[0]
+            : null;
 
 
-        const reader =
+    if (fichier) {
+
+        const lecteur =
             new FileReader();
 
 
-        reader.onload = function(event) {
+        lecteur.onload = function(event) {
 
             const data =
                 chargerDonnees();
@@ -214,17 +624,27 @@ form.addEventListener("submit", function(e) {
             );
 
 
-            suivant("etape4.html");
+            console.log(
+                "Étape 3 enregistrée :",
+                chargerDonnees()
+            );
+
+
+            suivant("recapitulatif.html");
 
         };
 
 
-        reader.readAsDataURL(fichier);
+        lecteur.readAsDataURL(fichier);
 
 
     } else {
 
-        // Pas de photo
+        console.log(
+            "Étape 3 enregistrée :",
+            chargerDonnees()
+        );
+
 
         suivant("recapitulatif.html");
 
@@ -234,40 +654,6 @@ form.addEventListener("submit", function(e) {
 
 </script>
 
-<script>
-
-const photoInput = document.getElementById("photo");
-
-if (photoInput) {
-
-    photoInput.addEventListener("change", function () {
-
-        const fichier = this.files[0];
-
-        if (!fichier) return;
-
-        const lecteur = new FileReader();
-
-        lecteur.onload = function (e) {
-
-            const data = chargerDonnees();
-
-            data.photo = e.target.result;
-
-            localStorage.setItem(
-                STORAGE_KEY,
-                JSON.stringify(data)
-            );
-
-        };
-
-        lecteur.readAsDataURL(fichier);
-
-    });
-
-}
-
-</script>
-
 </body>
+
 </html>
