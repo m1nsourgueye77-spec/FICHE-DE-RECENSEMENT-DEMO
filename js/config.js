@@ -1,4 +1,3 @@
-const STORAGE_KEY = "adhesionPMA";
 const CONFIG = {
 
     mode: "demo",
