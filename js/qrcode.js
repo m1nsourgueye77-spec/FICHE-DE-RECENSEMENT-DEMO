@@ -1,40 +1,32 @@
-function genererQRCode(numero) {
+function genererQRCode(numero, taille = 180) {
 
-    const zone =
-        document.getElementById("qrcode");
-
+    const zone = document.getElementById("qrcode");
 
     if (!zone) {
         return;
     }
 
-
     zone.innerHTML = "";
-
 
     if (!numero) {
 
         console.error(
-            "Aucun numéro d'adhérent."
+            "Aucun numéro d'adhérent pour générer le QR Code."
         );
 
         return;
-
     }
 
+    new QRCode(zone, {
 
-    new QRCode(
-        zone,
-        {
-            text: numero,
+        text: numero,
 
-            width: 180,
+        width: taille,
 
-            height: 180,
+        height: taille,
 
-            correctLevel:
-                QRCode.CorrectLevel.H
-        }
-    );
+        correctLevel:
+            QRCode.CorrectLevel.H
 
+    });
 }
