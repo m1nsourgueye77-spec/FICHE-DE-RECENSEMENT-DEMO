@@ -1910,3 +1910,110 @@ body {
         min-height: 160px;
     }
 }
+
+
+
+
+
+
+
+/* =====================================================
+   GI.CODE — IDENTITÉ JAUNE / OR
+   ===================================================== */
+
+/* Fond général */
+body {
+    background: #fff8df;
+    color: #222222;
+}
+
+/* En-tête */
+.form-header {
+    background: #f5c400;
+}
+
+/* Badge */
+.form-badge {
+    background: #fff8df;
+    color: #8a6500;
+    border-color: #e5b800;
+}
+
+/* Carte de progression */
+.progress-card {
+    background: #ffffff;
+    border-color: #ead37a;
+}
+
+/* Barre de progression */
+.progress-fill {
+    background: #f5c400;
+}
+
+/* Sections */
+.form-section {
+    background: #ffffff;
+    border-color: #ead37a;
+}
+
+/* Titres */
+.form-section-title {
+    color: #8a6500;
+}
+
+/* Icônes */
+.form-section-icon {
+    background: #fff3bd;
+    color: #b88900;
+}
+
+/* Champs */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: #ffffff;
+    color: #222222;
+    border-color: #d8d8d8;
+}
+
+/* Champs sélectionnés */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #f5c400;
+    box-shadow: 0 0 0 3px rgba(245, 196, 0, 0.18);
+    outline: none;
+}
+
+/* Boutons */
+.form-btn {
+    background: #f5c400;
+    color: #111111;
+    border-color: #dcae00;
+}
+
+/* Boutons au survol */
+.form-btn:hover {
+    background: #dcae00;
+    color: #111111;
+}
+
+/* Informations importantes */
+.electoral-notice {
+    background: #fff8df;
+    border-color: #e5c65c;
+    color: #333333;
+}
+
+/* Confidentialité */
+.form-confidentiality {
+    background: #fff8df;
+    border-color: #e5c65c;
+    color: #333333;
+}
+
+/* Pied de page */
+.form-footer {
+    border-top-color: #e5c65c;
+    color: #555555;
+}
