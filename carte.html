@@ -443,13 +443,14 @@
 <script src="js/script.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="js/qrcode.js"></script>
 
 
 <script>
 
 const data = chargerDonnees();
 
-const numero = localStorage.getItem("numeroAdherent");
+const numero = data.numeroAdherent;
 
 
 /* NUMÉRO */
@@ -513,14 +514,7 @@ if (data.signature) {
 
 if (numero) {
 
-    new QRCode(
-        document.getElementById("qrcode"),
-        {
-            text: numero,
-            width: 140,
-            height: 140
-        }
-    );
+    genererQRCode(numero, 140);
 
 }
 
